@@ -19,7 +19,7 @@
 @keyframes float{50%{transform:translateY(-10px)}}
 .isl-svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible;z-index:1;filter:drop-shadow(0 10px 14px #2d3e5026)}
 .deco{position:absolute;font-size:calc(5.4cqw * var(--s,1));line-height:1;transform:translate(-50%,-100%);transform-origin:50% 100%}
-.deco i{display:block;width:.9em;height:.9em;border-radius:50%;background:var(--dc,#6cc16a);box-shadow:inset 0 -.2em 0 #0002;font-style:normal;transform-origin:50% 100%;animation:sway 5s ease-in-out infinite}
+.deco i{display:block;width:1em;height:1em;font-style:normal;transform-origin:50% 100%;animation:sway 5s ease-in-out infinite}
 .deco::before{content:"";position:absolute;left:50%;bottom:-.06em;width:.8em;height:.2em;transform:translateX(-50%);border-radius:50%;background:#1f5a2f;opacity:.22}
 .deco.new i{animation:grow .8s cubic-bezier(.3,1.5,.5,1)}
 .deco.house,.deco.tree,.deco.bloom,.deco.fount{font-size:calc(7.6cqw * var(--s,1))}
@@ -43,8 +43,9 @@
 .stats small{color:var(--mute);font-size:.78rem}
 .dgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px}
 .dgrid button{border:2px solid var(--line);background:#fff;border-radius:16px;padding:10px;cursor:pointer;text-align:center}
-.dgrid .sw{display:block;width:28px;height:28px;margin:0 auto 6px;border-radius:50%}
+.dgrid .sw{display:block;width:44px;height:44px;margin:0 auto 6px}.dgrid .sw svg{display:block;width:100%;height:100%}.dgrid .sw.lock{border-radius:50%;background:#d9d9e4;width:28px;height:28px;margin-top:8px;margin-bottom:14px}.deco i svg{display:block;width:100%;height:100%;overflow:visible}
 .dgrid button[aria-pressed=true]{border-color:var(--green-d);background:var(--green)}
 .dgrid button:disabled{filter:grayscale(1);opacity:.6;cursor:not-allowed}
 .badge{background:#fff;border:2px dashed var(--line);border-radius:16px;padding:10px;text-align:center;opacity:.55}
 .badge.on{opacity:1;border:2px solid #e0b800;background:var(--yellow)}.badge .e{font-size:2rem;display:block}
+.deco.daisy,.deco.tulip,.deco.sun,.deco.sprout,.deco.bfly{font-size:calc(7cqw * var(--s,1))}

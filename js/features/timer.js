@@ -8,7 +8,7 @@ views.timer = () => header('Study Timer', 'Focus sessions earn XP. Breaks do not
   <p id="tMsg" aria-live="polite"></p>
   <div class="row" style="justify-content:center"><button class="btn" id="tGo" data-act="tGo">Start</button><button class="btn ghost" data-act="tReset">Reset</button><button class="btn ghost" data-act="tSound" id="tSnd" aria-pressed="${T.sound}">${T.sound ? 'Sound on' : 'Sound off'}</button></div></section>
   <section class="card"><h2>Settings</h2><div class="frm"><label for="tSubj">Subject (optional)<select id="tSubj" data-tset="subject">${subjOptions().map(o => `<option value="${esc(o.v)}"${o.v === T.subject ? ' selected' : ''}>${esc(o.l)}</option>`).join('')}</select></label>
-  <div class="row">${['focus', 'short', 'long'].map(k => `<label>${MODES[k].split(' ').slice(1).join(' ')} (min)<input type="number" min="1" max="180" value="${T.dur[k]}" data-tset="${k}" style="width:90px"></label>`).join('')}</div></div>
+  <div class="row">${['focus', 'short', 'long'].map(k => `<label>${MODES[k]} (min)<input type="number" min="1" max="180" value="${T.dur[k]}" data-tset="${k}" style="width:90px"></label>`).join('')}</div></div>
   <h2 style="margin-top:18px">This page session</h2><div id="tHist"></div></section></div>`;
 function timerUI() {
   const ring = $('#ring'); if (!ring) return;
@@ -36,7 +36,7 @@ function toggleTimer() {
 }
 function finishTimer() {
   clearInterval(T.iv); T.running = false; const focus = T.mode === 'focus', min = Math.round(T.total / 60);
-  T.history.unshift({ type: T.mode, label: `${MODES[T.mode].split(' ').slice(1).join(' ')} ${min}m`, subject: subjName(T.subject), time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) });
+  T.history.unshift({ type: T.mode, label: `${MODES[T.mode]} ${min}m`, subject: subjName(T.subject), time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) });
   beep(); sparkle(18);
   if (focus) {
     S.sessions.push({ type: 'focus', min, subject: T.subject, at: Date.now() });
