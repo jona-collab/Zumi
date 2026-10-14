@@ -1,0 +1,6 @@
+/* charts */
+.chart{width:100%;height:auto}
+.chart text{fill:var(--ink);font-size:11px;font-family:Nunito}
+.chart rect.b{fill:var(--sky-d);transition:.2s}.chart g:hover rect.b,.chart g:focus rect.b{fill:var(--green-d)}
+.legend{display:flex;gap:10px;flex-wrap:wrap;font-size:.85rem;margin-top:8px}
+.sw{display:inline-block;width:12px;height:12px;border-radius:4px;margin-right:4px;vertical-align:-1px}

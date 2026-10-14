@@ -1,0 +1,9 @@
+/* calendar */
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.cal .dow{text-align:center;font-weight:800;font-size:.8rem;color:var(--mute)}
+.cal button{min-height:58px;border:2px solid var(--line);background:#fff;border-radius:12px;cursor:pointer;padding:4px;display:flex;flex-direction:column;align-items:center;gap:2px}
+.cal button:hover{background:var(--yellow)}
+.cal button.out{opacity:.4}.cal button.today{border-color:var(--sky-d);background:var(--sky);font-weight:800}
+.cal button.sel{outline:3px solid var(--green-d)}
+.ev{font-size:.72rem;font-weight:800}
+.ev.ex{color:#9b3d8f}.ev.as{color:var(--sky-d)}

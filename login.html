@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Log in – Zumi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/login.css">
+<link rel="stylesheet" href="css/dreamy.css">
+</head>
+<body>
+<main class="card login" id="view" style="padding:26px;animation:none">
+  <h1>Zumi</h1>
+  <p id="sub">Welcome back! Log in to visit your study world.</p>
+
+  <form id="form" class="frm" novalidate>
+    <label for="name" class="req">Display name
+      <input id="name" name="name" type="text" maxlength="30" autocomplete="nickname" aria-describedby="e_name">
+      <span class="err" id="e_name" role="alert"></span></label>
+    <label for="email" class="req">Email
+      <input id="email" name="email" type="email" maxlength="80" autocomplete="email" aria-describedby="e_email">
+      <span class="err" id="e_email" role="alert"></span></label>
+    <label for="password" class="req">Password
+      <span class="pw"><input id="password" name="password" type="password" maxlength="64" autocomplete="current-password" aria-describedby="e_password">
+      <button type="button" class="btn ghost small" id="toggle" aria-pressed="false">Show</button></span>
+      <span class="err" id="e_password" role="alert"></span></label>
+    <label for="confirm" class="req hidden" id="confirmWrap">Confirm password
+      <input id="confirm" name="confirm" type="password" maxlength="64" autocomplete="new-password" aria-describedby="e_confirm">
+      <span class="err" id="e_confirm" role="alert"></span></label>
+    <button class="btn" type="submit" id="submit">Log in</button>
+  </form>
+
+  <div class="row" style="justify-content:center;margin-top:8px">
+    <button class="link" type="button" id="switch">New here? Create an account</button>
+    <button class="link" type="button" id="guest">Continue as guest</button>
+  </div>
+  <p class="note">This is a local sign-in. Accounts and study data are stored only in this browser (passwords are salted and hashed). Sign-up needs a valid email and a password of 8+ characters with a letter and a number.</p>
+</main>
+
+<script src="js/login.js"></script>
+</body>
+</html>

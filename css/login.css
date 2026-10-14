@@ -1,0 +1,6 @@
+body{display:grid;place-items:center;padding:20px}
+  .login{position:relative;z-index:1;width:min(420px,100%);text-align:center}
+  .login form{text-align:left;margin-top:14px}
+  .pw{display:flex;gap:8px}.pw input{flex:1;min-width:0}
+  .link{background:none;border:0;color:var(--sky-d);font-weight:800;cursor:pointer;text-decoration:underline;padding:6px;min-height:40px}
+  .hidden{display:none}
