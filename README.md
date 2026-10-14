@@ -2,7 +2,7 @@
 
 Zumi is a student planner that turns studying into a game. Students track subjects, assignments, exams and notes, run focus timers, and earn XP that grows a small floating island with decorations and achievements.
 
-**Live demo:** https://jona-collab.github.io/zumii/
+**Live demo:** https://jona-collab.github.io/Zumi/
 **Author:** Jonabie Piodo. INF242
 
 
